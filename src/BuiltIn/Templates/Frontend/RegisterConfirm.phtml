@@ -1,0 +1,15 @@
+<?php if ($this->CssClass() || $this->CssID()):?>
+<div<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass())?>"<?php endif; ?><?php if ($this->CssID()):?> id="<?php HtmlOut($this->CssID())?>"<?php endif; ?>>
+<?php endif; ?>
+<?php if ($this->isValid): ?>
+<div class="alert-box success">
+    <?php echo Trans('BuiltIn.RegisterConfirm.Success'); ?>
+</div>
+<?php else: ?>
+<div class="alert-box alert">
+    <?php echo Trans('BuiltIn.RegisterConfirm.Error'); ?>
+</div>
+<?php endif; ?>
+<?php if ($this->CssClass() || $this->CssID()):?>
+</div>
+<?php endif; ?>

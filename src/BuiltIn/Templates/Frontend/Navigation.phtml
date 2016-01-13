@@ -1,0 +1,17 @@
+<?php if (!$this->isEmpty): ?>
+<?php if (!$this->isSubLevel): ?>
+<nav<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass()) ?>"<?php endif ?><?php if ($this->CssID()): ?> id="<?php HtmlOut($this->CssID()) ?>"<?php endif; ?>>
+<?php endif; ?>
+    <ul>
+        <?php while ($this->naviItem): ?>
+        <li class="<?php HtmlOut($this->ItemClasses()) ?>">
+            <a href="<?php HtmlOut($this->Url()); ?>"><?php HtmlOut($this->naviItem->GetName()); ?></a>
+            <?php echo $this->RenderSubLevel(); ?>
+        </li>
+        <?php $this->naviItem = $this->NextItem(); ?>
+        <?php endwhile; ?>
+    </ul>
+<?php if (!$this->isSubLevel): ?>
+</nav>
+<?php endif; ?>
+<?php endif; ?>

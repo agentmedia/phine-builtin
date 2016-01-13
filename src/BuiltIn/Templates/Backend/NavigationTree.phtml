@@ -1,0 +1,31 @@
+<h1><a href="<?php HtmlOut($this->BackLink()) ?>" class="fa fa-chevron-circle-left right" title="<?php TransOut('Core.ButtonText.Back')?>"></a><?php TransOut('BuiltIn.NavigationTree.Title') ?></h1>
+<p>
+    <?php TransOut('BuiltIn.NavigationTree.Description') ?>
+</p>
+<div id="tree" class="editable-tree">
+<table>
+    <tr class="open" data-tree-id="0">
+            <td>
+                <a class="tree-toggler"></a>
+                <strong><?php HtmlOut($this->navigation->GetName()) ?></strong>
+            </td>
+            <td>
+                <a class="fa fa-arrow-right tiny secondary button tree-cut-hidden" href="<?php TransOut($this->CreateFormUrl())?>" title="<?php TransOut('BuiltIn.NavigationTree.CreateStartItem')?>"></a>
+                <a class="fa fa-arrow-right tree-insert-in tiny button" title="<?php TransOut('BuiltIn.NavigationTree.InsertIn')?>"></a>
+                <a class="fa fa-times tree-clipboard tiny secondary button" title="<?php TransOut('BuiltIn.NavigationTree.CancelCut')?>"></a>
+            </td>
+    </tr>
+    <?php if ($this->hasItems):?>
+    <?php while ($item = $this->NextItem()):?>
+    <?php $branch = new Phine\Bundles\BuiltIn\Snippets\Backend\NavigationBranch($item); ?>
+    <?php echo $branch->Render(); ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
+</table>
+</div>
+<p>
+    
+    <a href="<?php HtmlOut($this->BackLink()); ?>" class="button"> 
+        <span class="fa fa-chevron-circle-left"></span>
+         <?php TransOut('BuiltIn.NavigationTree.Back') ?></a>
+</p>

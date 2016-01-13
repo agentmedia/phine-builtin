@@ -1,0 +1,9 @@
+<?php if (!$this->isEmpty): ?>
+<ul<?php if ($this->CssID()):?> id="<?php HtmlOut($this->CssID()) ?>"<?php endif; ?><?php if ($this->CssClass()):?> class="<?php HtmlOut($this->CssClass()) ?>"<?php endif; ?>>
+    <?php while ($child = $this->NextChild()): ?>
+    <li>
+        <?php echo $this->RenderChild($child); ?>
+    </li>
+    <?php endwhile; ?>
+</ul>
+<?php endif; ?>

@@ -1,0 +1,26 @@
+<h1><a href="<?php HtmlOut($this->BackLink()) ?>" class="fa fa-chevron-circle-left right" title="<?php TransOut('Core.ButtonText.Back')?>"></a><?php TransOut('BuiltIn.LoginForm.Title') ?></h1>
+<p>
+    <?php TransOut('BuiltIn.LoginForm.Description') ?>
+</p>
+<form method="post" action="<?php HtmlOut(CurrentUri()) ?>">
+    <fieldset>
+        <legend><?php TransOut('BuiltIn.LoginForm.Legend') ?></legend>
+        <?php echo $this->selectorNext->Render(); ?>
+        <?php echo $this->selectorPassword->Render(); ?>
+        <div class="row">
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('CssID'); ?>
+            </div>
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('CssClass'); ?>
+            </div>
+            
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('Template'); ?>
+            </div>
+        </div>
+    </fieldset>
+    <?php echo $this->RenderWordingFields(); ?>
+    <?php echo $this->RenderAccessElements(); ?>
+    <?php echo $this->RenderSubmit(); ?>
+</form>

@@ -1,0 +1,7 @@
+<form action="<?php HtmlOut(CurrentUri())?>" method="post"<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass())?>"<?php endif; ?><?php if ($this->CssID()):?> id="<?php HtmlOut($this->CssID())?>"<?php endif; ?>>
+    <?php echo $this->RenderElement('Name'); ?>
+    <?php echo $this->RenderElement('EMail'); ?>
+    <?php echo $this->RenderElement('Password'); ?>
+    <?php echo $this->RenderElement('Terms'); ?>   
+    <?php echo $this->RenderSubmit(); ?>   
+</form>

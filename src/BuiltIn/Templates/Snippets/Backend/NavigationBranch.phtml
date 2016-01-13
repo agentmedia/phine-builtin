@@ -1,0 +1,23 @@
+<tr data-tree-parent-id="<?php HtmlOut($this->ParentID()); ?>" data-tree-id="<?php echo $this->item->GetID() ?>">
+    <td>
+        <a class="tree-toggler"></a>
+            <?php HtmlOut($this->item->GetName())?>
+    </td>
+    <td>
+        <a class="tiny secondary button tree-cut-hidden fa fa-arrow-right" href="<?php HtmlOut($this->CreateInUrl()) ?>" title="<?php TransOut('BuiltIn.NavigationTree.CreateIn')?>"></a>
+        <a class="tiny secondary button tree-cut-hidden fa fa-arrow-down" href="<?php HtmlOut($this->CreateAfterUrl()) ?>" title="<?php TransOut('BuiltIn.NavigationTree.CreateAfter')?>"></a>
+        
+        <a href="#" class="tiny button tree-insert-in fa fa-arrow-right" title="<?php TransOut('BuiltIn.NavigationTree.InsertIn')?>"></a>
+        <a href="#" class="tiny button tree-insert-after fa fa-arrow-down" title="<?php TransOut('BuiltIn.NavigationTree.InsertAfter')?>"></a>
+        
+       
+        <a class="tiny button fa fa-scissors tree-cutter" title="<?php TransOut('BuiltIn.NavigationTree.Cut')?>"></a>
+        <a class="tiny button fa fa-pencil tree-cut-hidden" href="<?php HtmlOut($this->EditUrl()) ?>" title="<?php TransOut('BuiltIn.NavigationTree.Edit')?>"></a>
+        
+        <a class="tiny tree-remover alert button fa fa-remove tree-cut-hidden" title="<?php TransOut('BuiltIn.NavigationTree.Delete')?>" data-tree-remove-message="<?php TransOut('BuiltIn.NavigationTree.ConfirmDelete_{0}', $this->item->GetName()) ?>"></a>
+    </td>
+</tr>
+<?php while ($child = $this->NextChild()): ?>
+<?php $row = new static($child); ?>
+<?php echo $row->Render(); ?>
+<?php endwhile; ?>

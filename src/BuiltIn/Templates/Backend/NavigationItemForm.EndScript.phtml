@@ -1,0 +1,26 @@
+<?php echo $this->selector->RenderScript(); ?>
+<script>
+    $(function()
+    {
+        var typeSelect = $('#Type');
+        function toggleFields()
+        {
+            if ($(typeSelect).val() === 'PageItem')
+            {
+                $('#UrlFields').hide();
+                $('#PageFields').show();
+            }
+            else
+            {
+                $('#UrlFields').show();
+                $('#PageFields').hide();
+            }
+        }
+        toggleFields();
+        typeSelect.change(function()
+        {
+            toggleFields();
+        });
+        
+    });
+</script>

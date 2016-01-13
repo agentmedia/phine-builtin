@@ -1,0 +1,7 @@
+<?php if ($this->CssClass() || $this->CssID()): ?>
+<div<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass()) ?>"<?php endif ?><?php if ($this->CssID()): ?> id="<?php HtmlOut($this->CssID()) ?>"<?php endif ?>>
+<?php endif; ?>
+    <?php echo $this->code; ?>
+<?php if ($this->CssClass() || $this->CssID()): ?>
+</div>
+<?php endif; ?>

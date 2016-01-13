@@ -1,0 +1,20 @@
+<form action="<?php HtmlOut(CurrentUri())?>" method="post">
+    <?php echo $this->RenderElement('Name'); ?>
+    <?php echo $this->RenderElement('Password'); ?>
+    <?php if ($this->passwordUrl): ?>
+    <?php echo Trans('BuiltIn.Login.Password.Link_{0}', Html($this->passwordUrl)); ?>
+    <?php endif; ?>
+    <?php if ($this->Elements()->HasCollectionErrors()): ?>
+    <small class="error">
+        <?php foreach ($this->Elements()->GetValidators() as $validator): ?>
+        <?php $error = $validator->GetError() ?>
+        <?php if ($error): ?>
+        <span>
+            <?php HtmlOut($validator->GetError()); ?>
+        </span>
+        <?php endif; ?>
+        <?php endforeach ?>
+    </small>
+    <?php endif; ?>
+    <?php echo $this->RenderSubmit(); ?>
+</form>

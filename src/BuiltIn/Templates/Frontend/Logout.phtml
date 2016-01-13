@@ -1,0 +1,4 @@
+<form method="post" action="<?php HtmlOut(CurrentUri())?>"<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass())?>"<?php endif; ?><?php if ($this->CssID()):?> id="<?php HtmlOut($this->CssID())?>"<?php endif; ?>>
+    <input type="hidden" name="<?php HtmlOut($this->triggerName) ?>" value="1">
+    <button type="submit"><?php TransOut('BuiltIn.Logout.SubmitLogout')?></button>
+</form>
