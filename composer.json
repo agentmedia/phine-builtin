@@ -2,7 +2,7 @@
     "name": "agentmedia/phine-core",
     "description": "The builtin bundle for the Phine CMS, including base frontend modules",
     "license": "Apache License 2.0",
-	"type": "phine-bundle"
+	"type": "phine-bundle",
     "homepage": "http://github.com/agentmedia/phine-core",
     "authors": [
         {
