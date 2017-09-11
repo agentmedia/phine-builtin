@@ -1,5 +1,5 @@
 {
-    "name": "agentmedia/phine-core",
+    "name": "agentmedia/phine-builtin",
     "description": "The builtin bundle for the Phine CMS, including base frontend modules",
     "license": "Apache License 2.0",
 	"type": "phine-bundle",
