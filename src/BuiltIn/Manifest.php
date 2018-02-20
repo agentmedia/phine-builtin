@@ -59,10 +59,10 @@ class Manifest extends BundleManifest
     /*
      * Loads code not coverable by phine autoload
      */
-    /*protected function LoadFrontendCode()
+    protected function LoadFrontendCode()
     {
-        require_once Path::Combine(__DIR__, 'ThirdParty/PHPMailer/PHPMailerAutoload.php');
-    }*/
+        //require_once Path::Combine(__DIR__, 'ThirdParty/PHPMailer/PHPMailerAutoload.php');
+    }
 
 }
 
