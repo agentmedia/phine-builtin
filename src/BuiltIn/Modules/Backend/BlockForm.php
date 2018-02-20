@@ -4,7 +4,7 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Logic\Module\ContentForm;
 use Phine\Bundles\BuiltIn\Modules\Frontend\Block;
-use Phine\Database\BuiltIn\ContentBlock;
+use App\Phine\Database\BuiltIn\ContentBlock;
 use Phine\Bundles\BuiltIn\Logic\Enums\BlockTag;
 use Phine\Framework\FormElements\Fields\Select;
 

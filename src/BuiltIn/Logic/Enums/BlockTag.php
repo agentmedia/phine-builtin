@@ -14,7 +14,6 @@ class BlockTag  extends Enum
     {
         return new self('article');
     }
-    
     /**
      * The block tag name "aside"
      * @return BlockTag
@@ -69,6 +68,14 @@ class BlockTag  extends Enum
         return new self('ins');
     }
     
+    /**
+     * The block tag name "main"
+     * @return BlockTag
+     */
+    static function Main()
+    {
+        return new self('main');
+    }
     /**
      * The block tag name "nav"
      * @return BlockTag

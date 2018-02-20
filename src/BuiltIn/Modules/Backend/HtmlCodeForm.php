@@ -3,7 +3,7 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 use Phine\Bundles\Core\Logic\Module\ContentForm;
 use Phine\Framework\FormElements\Fields\Textarea;
 use Phine\Bundles\BuiltIn\Modules\Frontend\HtmlCode;
-use Phine\Database\BuiltIn\ContentHtmlCode;
+use App\Phine\Database\BuiltIn\ContentHtmlCode;
 
 /**
  * The content form for an html element

@@ -157,3 +157,91 @@ $translator->AddTranslation($lang, 'BuiltIn.RepeaterForm.Submit', 'Speichern');
 
 //Logout (form)
 $translator->AddTranslation($lang, 'BuiltIn.Logout.BackendName', '<Logout-Button>');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.Title', 'Logout-Formular / Link');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.Description', 'Definieren Sie hier den Abmelde-Button');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.Legend', 'Einstellungen');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.NextUrl', 'Seite nach Abmelden');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.SubmitLogout', 'Button-Text');
+$translator->AddTranslation($lang, 'BuiltIn.LogoutForm.Submit', 'Speichern');
+
+//ChangePasswordForm
+$translator->AddTranslation($lang, 'BuiltIn.ChangePassword.BackendName', 'Formular Passwort vergessen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Title', 'Passwort Neu Setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Description', 'Mit Hilfe dieses Elementes kann der User die Neusetzung seines Passwortes per Mail anfordern.');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Legend', 'Einstellungen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.NextUrl', 'URL Nach Formularversand');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.ConfirmUrl', 'Basis-URL in Bestätigungsmail');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailFrom', 'Mail-Absender');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailSubject', 'Mail-Betreff');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailText1', 'Mail-Text vor Bestätigungslink');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailText2', 'Mail-Text nach Bestätigungslink');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailStyles', 'CSS-Stile in der Mail');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Submit', 'Speichern');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.NextUrl.Validation.Required.Missing', 'Bitte Folge-URL setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.ConfirmUrl.Validation.Required.Missing', 'Bitte Bestätigungs-URL setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailFrom.Validation.Required.Missing', 'Bitte Absendeadresse setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailFrom.Validation.PhpFilter.InvalidEmail', 'Bitte gültige E-Mail verwenden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailText1.Validation.Required.Missing', 'Bitte Einführungstext der Mail eingeben');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.MailSubject.Validation.Required.Missing', 'Bitte Betreff angeben');
+
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Name', 'Feld-Label Username/E-Mail');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Name-Validation-Required-Missing', 'Fehlermeldung Name/E-Mail nich ausgefüllt');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.Name-Validation-DatabaseCount-TooFew', 'Fehlermeldung Name/E-Mail nicht gefunden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordForm.ChangePasswordSubmit', 'Button-Label');
+
+//Change Password Confirm Form
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Title', 'Passwort neu setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirm.BackendName', 'Formular Passwort neu setzen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Description', 'Passen Sie hier das Formular für ein neues Passwort an.');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Legend', 'Einstellungen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.SuccessUrl', 'Nächste URL bei Erfolg');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.ErrorUrl', 'Nächste URL bei Fehler');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Success', 'Meldung bei erfolgreicher Änderung');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Error', 'Meldung bei fehlerhaftem Zugriff');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Password', 'Label Passwort-Feld');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Password-Validation-Required-Missing', 'Fehlermeldung fehlende Passworteingabe');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.PasswordRepeat', 'Label Passwort Wiederholen-Feld');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.PasswordRepeat-Validation-Required-Missing', 'Fehlermeldung Passwort nicht wiederholt');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.PasswordRepeat-Validation-CompareCheck-EqualsNot_{0}', 'Passwörter stimmen nicht überein');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.PasswordChangeSubmit', 'Button-Label');
+$translator->AddTranslation($lang, 'BuiltIn.ChangePasswordConfirmForm.Submit', 'Speichern');
+
+//Change E-Mail Confirm Form
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Title', 'Bestätigung Neue E-Mail');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirm.BackendName', 'Bestätigung Neue E-Mail');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Description', 'Dieses Element wird auf der Seite eingebunden, wo eine neu gesetzte Mail bestätigt werden soll.');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Legend', 'Einstellungen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.SuccessUrl', 'Nächste URL bei Erfolg');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.ErrorUrl', 'Nächste URL bei Fehler');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Submit', 'Speichern');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Success', 'Meldung bei erfolgreicher Änderung');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailConfirmForm.Error', 'Meldung bei fehlerhaftem Zugriff');
+
+//Change EMail form
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.Title', 'Formular Neue E-Mail-Adresse');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMail.BackendName', 'Formular Neue E-Mail-Adresse');
+
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.Description', 'Ein Formular zur Änderung der Nutzer-E-Mail-Adresse. Die Änderungsanfrage wird in der Datenbank vermerkt, wird aber erst nach Mail-Bestätigung wirksam.');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.Legend', 'Einstellungen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NextUrl', 'URL nach Absenden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NextUrl.Validation.Required.Missing', 'Folge-URL muss angegeben werden');
+
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.ConfirmUrl', 'Basis-URL zur Bestätigung');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.ConfirmUrl.Validation.Required.Missing', 'Bestätigungs-URL muss angegeben werden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailFrom', 'Absender-Mailadresse');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailFrom.Validation.Required.Missing', 'Absender muss angegeben werden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailFrom.Validation.PhpFilter.InvalidEmail', 'Ungültige Mailadresse');
+
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailSubject', 'Mail-Betreff');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailSubject.Validation.Required.Missing', 'Betreff muss angegeben werden');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailText1', 'Mail-Text vor Bestätigungslink');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailText1.Validation.Required.Missing', 'Bitte Einführungstext eingeben');
+
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailText2', 'Mail-Text nach Bestätigungslink');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.MailStyles', 'Mail-CSS-Stile');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.Submit', 'Speichern');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NewEMail', 'Feld-Label Neue E-Mailadresse');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NewEMail-Validation-Required-Missing', 'Fehlermeldung Mail-Adresse nich eingegeben');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NewEMail-Validation-PhpFilter-InvalidEmail', 'Fehlermeldung ungültige Mailadresse');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.NewEMail.Validation-DatabaseCount-TooMuch', 'Fehlermeldung Mailadresse bereits eingetragen');
+$translator->AddTranslation($lang, 'BuiltIn.ChangeEMailForm.ChangeEMailSubmit', 'Button-Label');

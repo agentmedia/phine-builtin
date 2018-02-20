@@ -2,8 +2,8 @@
 
 namespace Phine\Bundles\BuiltIn\Modules\Backend;
 use Phine\Bundles\Core\Logic\Module\ContentForm;
-use Phine\Database\BuiltIn\ContentLogout;
-use Phine\Database\BuiltIn\ContentLogoutSchema;
+use App\Phine\Database\BuiltIn\ContentLogout;
+use App\Phine\Database\BuiltIn\ContentLogoutSchema;
 use Phine\Bundles\BuiltIn\Modules\Frontend\Logout;
 use Phine\Bundles\Core\Snippets\FormParts\PageUrlSelector;
 
@@ -59,7 +59,7 @@ class LogoutForm extends ContentForm
     private function AddNextUrlField()
     {
         $name = 'NextUrl';
-        $this->selectorNext = new PageUrlSelector($name, $this->Label($name), $this->logout->GetNextUrl());
+        $this->selectorNext = new PageUrlSelector($name, Trans($this->Label($name)), $this->logout->GetNextUrl());
         $this->selectorNext->SetRequired($this->ErrorPrefix($name));
         $this->Elements()->AddElement($name, $this->selectorNext);
         

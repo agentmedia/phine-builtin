@@ -3,7 +3,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Bundles\BuiltIn\Modules\Backend\ContainerForm;
-use Phine\Database\BuiltIn\ContentContainer;
+use App\Phine\Database\BuiltIn\ContentContainer;
 use Phine\Bundles\Core\Logic\Rendering\ContentsRenderer;
 use Phine\Bundles\Core\Logic\Tree\ContainerContentTreeProvider;
 

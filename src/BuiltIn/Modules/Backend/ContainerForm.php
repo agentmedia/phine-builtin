@@ -4,11 +4,11 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Logic\Module\ContentForm;
 use Phine\Bundles\BuiltIn\Modules\Frontend\Div;
-use Phine\Database\BuiltIn\ContentContainer;
-use Phine\Database\BuiltIn\ContentContainerSchema;
+use App\Phine\Database\BuiltIn\ContentContainer;
+use App\Phine\Database\BuiltIn\ContentContainerSchema;
 use Phine\Bundles\BuiltIn\Modules\Frontend;
-use Phine\Database\Core\Container;
-use Phine\Database\Access;
+use App\Phine\Database\Core\Container;
+use App\Phine\Database\Access;
 
 use Phine\Framework\FormElements\Fields\Select;
 

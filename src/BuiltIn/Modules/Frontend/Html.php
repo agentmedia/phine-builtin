@@ -2,7 +2,7 @@
 
 namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 use Phine\Bundles\Core\Logic\Module\FrontendModule;
-use Phine\Database\BuiltIn\ContentHtml;
+use App\Phine\Database\BuiltIn\ContentHtml;
 use Phine\Bundles\BuiltIn\Modules\Backend\HtmlForm;
 use Phine\Framework\System\Text;
 /**

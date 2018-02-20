@@ -2,11 +2,11 @@
 namespace Phine\Bundles\BuiltIn\Snippets\Backend;
 
 use Phine\Bundles\Core\Logic\Snippet\TemplateSnippet;
-use Phine\Database\BuiltIn\NavigationItem;
+use App\Phine\Database\BuiltIn\NavigationItem;
 use Phine\Bundles\BuiltIn\Logic\Tree\NavigationTreeProvider;
 use Phine\Bundles\Core\Logic\Routing\BackendRouter;
 use Phine\Bundles\BuiltIn\Modules\Backend\NavigationItemForm;
-use Phine\Database\BuiltIn\ContentNavigation;
+use App\Phine\Database\BuiltIn\ContentNavigation;
 
 class NavigationBranch extends TemplateSnippet
 {

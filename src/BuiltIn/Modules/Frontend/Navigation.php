@@ -4,10 +4,10 @@ namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 
 use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Bundles\BuiltIn\Modules\Backend\NavigationForm;
-use Phine\Database\BuiltIn\ContentNavigation;
+use App\Phine\Database\BuiltIn\ContentNavigation;
 use Phine\Bundles\BuiltIn\Logic\Tree\NavigationTreeProvider;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
-use Phine\Database\BuiltIn\NavigationItem;
+use App\Phine\Database\BuiltIn\NavigationItem;
 use Phine\Bundles\Core\Logic\Rendering\PageRenderer;
 
 /**

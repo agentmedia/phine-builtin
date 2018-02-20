@@ -30,3 +30,7 @@ Frontend member support; new registration elements brought to backend:
 === 1.0.2 ===
 
 Added the useful repeater for easily iterating over child content elements
+
+=== 1.0.3 ===
+
+Added member change forms for password and emails; and a setting to set up lifetime

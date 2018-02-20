@@ -3,7 +3,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Bundles\BuiltIn\Modules\Backend\RepeaterForm;
-use Phine\Database\BuiltIn\ContentRepeater;
+use App\Phine\Database\BuiltIn\ContentRepeater;
 use Phine\Bundles\Core\Logic\Rendering\ContentRenderer;
 
 /**

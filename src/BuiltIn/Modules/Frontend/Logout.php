@@ -5,7 +5,7 @@ use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Bundles\BuiltIn\Modules\Backend\LogoutForm;
 use Phine\Framework\System\Http\Request;
 use Phine\Framework\System\Http\Response;
-use Phine\Database\BuiltIn\ContentLogout;
+use App\Phine\Database\BuiltIn\ContentLogout;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
 /**
  * The logout link used in the frontend

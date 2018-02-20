@@ -2,15 +2,13 @@
 namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 use Phine\Bundles\Core\Logic\Module\FrontendForm;
 use Phine\Bundles\BuiltIn\Modules\Backend\LoginForm;
-use Phine\Database\BuiltIn\ContentLogin;
+use App\Phine\Database\BuiltIn\ContentLogin;
 use Phine\Framework\FormElements\Fields\Input;
 use Phine\Framework\Validation\Access;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
 use Phine\Framework\System\Http\Response;
 use Phine\Framework\System\Http\Request;
-use Phine\Bundles\Core\Logic\Tree\PageTreeProvider;
-use Phine\Bundles\Core\Logic\Rendering\PageRenderer;
-use Phine\Framework\System\String;
+use Phine\Framework\System\Str;
 
 /**
  * The member login element
@@ -22,22 +20,24 @@ class Login extends FrontendForm
      * @var ContentLogin
      */
     private $login;
-    
+
     /**
      * The password reset link
      * @var string
      */
     protected $passwordLink;
-  /*  
-    protected function BeforeInit()
-    {
-        if (!self::Guard()->Accessor()->IsUndefined() && $this->NextUrl())
-        {
-            Response::Redirect($this->NextUrl());
-        }
-        return parent::BeforeInit();
-    }
-    */
+
+    /*
+      protected function BeforeInit()
+      {
+      if (!self::Guard()->Accessor()->IsUndefined() && $this->NextUrl())
+      {
+      Response::Redirect($this->NextUrl());
+      }
+      return parent::BeforeInit();
+      }
+     */
+
     /**
      * Initializes the login element
      * @return boolean Returns always true
@@ -55,23 +55,20 @@ class Login extends FrontendForm
         $this->Elements()->AddValidator($validator);
         return parent::Init();
     }
-    
+
     private function HandleLoggedIn()
     {
         $nextUrl = $this->login->GetNextUrl();
-        if (!self::Guard()->Accessor()->IsUndefined())
-        {
-            if ($nextUrl)
-            {
-                Response::Redirect($nextUrl);
+        if (!self::Guard()->Accessor()->IsUndefined()) {
+            if ($nextUrl) {
+                Response::Redirect(FrontendRouter::Url($nextUrl));
             }
-            else
-            {
+            else {
                 throw new \Exception(Trans('BuiltIn.Login.Exception.AlreadyLoggedIn'));
             }
         }
     }
-    
+
     private function AddNameField()
     {
         $name = 'Name';
@@ -90,18 +87,16 @@ class Login extends FrontendForm
 
     protected function OnSuccess()
     {
-        if (self::Guard()->Accessor()->IsUndefined())
-        {
-            self::Guard()->Login(array('Name'=>$this->Value('Name'), 
-                'Password'=>$this->Value('Password')));
+        if (self::Guard()->Accessor()->IsUndefined()) {
+            self::Guard()->Login(array('Name' => $this->Value('Name'),
+                'Password' => $this->Value('Password')));
         }
         $nextUrl = $this->NextUrl();
-        if ($nextUrl) 
-        {
+        if ($nextUrl) {
             Response::Redirect($nextUrl);
         }
     }
-    
+
     /**
      * 
      * @return string
@@ -109,20 +104,17 @@ class Login extends FrontendForm
      */
     private function NextUrl()
     {
-        $nextUrl = String::Trim(Request::GetData('nextUrl'));
-        if ($nextUrl) 
-        {
+        $nextUrl = Str::Trim(Request::GetData('nextUrl'));
+        if ($nextUrl) {
             return $nextUrl;
         }
         $nextPageUrl = $this->login->GetNextUrl();
-        if ($nextPageUrl)
-        {
+        if ($nextPageUrl) {
             return FrontendRouter::Url($nextPageUrl);
         }
         return '';
     }
 
-    
     /**
      * False because no customizable sub elements are allowed
      * @return boolean Returns false, no child elements allowed
@@ -140,7 +132,7 @@ class Login extends FrontendForm
     {
         return new LoginForm();
     }
-    
+
     /**
      * True because custom templates are allowed
      * @return boolean Returns true
@@ -149,5 +141,5 @@ class Login extends FrontendForm
     {
         return true;
     }
-}
 
+}

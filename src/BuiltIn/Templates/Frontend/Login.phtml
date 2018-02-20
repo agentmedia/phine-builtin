@@ -2,7 +2,9 @@
     <?php echo $this->RenderElement('Name'); ?>
     <?php echo $this->RenderElement('Password'); ?>
     <?php if ($this->passwordUrl): ?>
-    <?php echo Trans('BuiltIn.Login.Password.Link_{0}', Html($this->passwordUrl)); ?>
+    <p>
+        <?php echo Trans('BuiltIn.Login.Password.Link_{0}', Html($this->passwordUrl)); ?>
+    </p>
     <?php endif; ?>
     <?php if ($this->Elements()->HasCollectionErrors()): ?>
     <small class="error">

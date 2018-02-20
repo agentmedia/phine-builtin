@@ -2,8 +2,8 @@
 
 namespace Phine\Bundles\BuiltIn\Logic\Hooks;
 use Phine\Bundles\Core\Logic\Hooks\IDeleteHook;
-use Phine\Database\Core\Page;
-use Phine\Database\BuiltIn\NavigationPage;
+use App\Phine\Database\Core\Page;
+use App\Phine\Database\BuiltIn\NavigationPage;
 use Phine\Bundles\BuiltIn\Logic\Tree\NavigationTreeProvider;
 use Phine\Bundles\Core\Logic\Tree\TreeBuilder;
 

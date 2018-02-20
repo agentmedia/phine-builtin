@@ -2,9 +2,9 @@
 
 namespace Phine\Bundles\BuiltIn\Logic\Logging;
 use Phine\Bundles\Core\Logic\Logging\Interfaces\IContainerReferenceResolver;
-use Phine\Database\Core\Content;
-use Phine\Database\Core\Container;
-use Phine\Database\BuiltIn\ContentContainer;
+use App\Phine\Database\Core\Content;
+use App\Phine\Database\Core\Container;
+use App\Phine\Database\BuiltIn\ContentContainer;
 class ContainerReferenceResolver implements IContainerReferenceResolver
 {
     /**

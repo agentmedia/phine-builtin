@@ -3,7 +3,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Modules\Backend\Base\JsonTree;
-use Phine\Database\BuiltIn\NavigationItem;
+use App\Phine\Database\BuiltIn\NavigationItem;
 use Phine\Bundles\BuiltIn\Logic\Tree\NavigationTreeProvider;
     
 

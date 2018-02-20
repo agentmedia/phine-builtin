@@ -4,8 +4,8 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\BuiltIn\Modules\Frontend\Repeater;
 use Phine\Bundles\Core\Logic\Module\ContentForm;
-use Phine\Database\BuiltIn\ContentRepeater;
-use Phine\Database\BuiltIn\ContentRepeaterSchema;
+use App\Phine\Database\BuiltIn\ContentRepeater;
+use App\Phine\Database\BuiltIn\ContentRepeaterSchema;
 
 /**
  * Backend form for the reeater

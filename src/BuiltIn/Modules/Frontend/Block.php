@@ -3,7 +3,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Frontend;
 use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Bundles\BuiltIn\Modules\Backend\BlockForm;
-use Phine\Database\BuiltIn\ContentBlock;
+use App\Phine\Database\BuiltIn\ContentBlock;
 
 /**
  * Renders the block

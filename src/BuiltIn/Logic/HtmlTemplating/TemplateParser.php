@@ -2,7 +2,7 @@
 
 namespace Phine\Bundles\BuiltIn\Logic\HtmlTemplating;
 use Phine\Framework\System\IO\File;
-use Phine\Framework\System\String;
+use Phine\Framework\System\Str;
 
 /**
  * A common parser for html templates with placeholders
@@ -59,7 +59,7 @@ class TemplateParser
         $contents = File::GetContents($file);
         foreach ($this->replacements as $placeholder=>$text)
         {
-            $contents = String::Replace($this->phStart . $placeholder . $this->phEnd, 
+            $contents = Str::Replace($this->phStart . $placeholder . $this->phEnd, 
                     $text, $contents);
         }
         return $contents;

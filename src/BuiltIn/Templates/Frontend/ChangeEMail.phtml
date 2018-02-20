@@ -1,0 +1,8 @@
+<form action="<?php HtmlOut(CurrentUri()) ?>" method="post"<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass()) ?>"<?php endif; ?><?php if ($this->CssID()): ?> id="<?php HtmlOut($this->CssID()) ?>"<?php endif; ?>>
+    <fieldset>
+        <legend><?php TransOut('BuiltIn.ChangeEMail.FormLegend') ?></legend>
+        <?php echo $this->RenderElement('NewEMail'); ?>
+    </fieldset>
+
+    <?php echo $this->RenderSubmit(); ?>
+</form>

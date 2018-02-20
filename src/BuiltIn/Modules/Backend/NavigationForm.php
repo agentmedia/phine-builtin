@@ -4,7 +4,7 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Logic\Module\ContentForm;
 use Phine\Bundles\BuiltIn\Modules\Frontend\Navigation;
-use Phine\Database\BuiltIn\ContentNavigation;
+use App\Phine\Database\BuiltIn\ContentNavigation;
 use Phine\Framework\FormElements\Fields\Input;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\BackendRouter;

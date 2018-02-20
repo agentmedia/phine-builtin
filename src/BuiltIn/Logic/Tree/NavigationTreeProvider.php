@@ -2,9 +2,9 @@
 
 namespace Phine\Bundles\BuiltIn\Logic\Tree;
 use Phine\Bundles\Core\Logic\Tree\ITreeProvider;
-use Phine\Database\BuiltIn\NavigationItem;
-use Phine\Database\BuiltIn\ContentNavigation;
-use Phine\Database\Access;
+use App\Phine\Database\BuiltIn\NavigationItem;
+use App\Phine\Database\BuiltIn\ContentNavigation;
+use App\Phine\Database\Access;
 
 class NavigationTreeProvider implements ITreeProvider
 {

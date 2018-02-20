@@ -2,15 +2,15 @@
 
 namespace Phine\Bundles\BuiltIn\Modules\Backend;
 use Phine\Bundles\Core\Logic\Module\ContentForm;
-use Phine\Database\BuiltIn\ContentRegisterConfirm;
-use Phine\Database\BuiltIn\ContentRegisterConfirmSchema;
+use App\Phine\Database\BuiltIn\ContentRegisterConfirm;
+use App\Phine\Database\BuiltIn\ContentRegisterConfirmSchema;
 use Phine\Bundles\Core\Snippets\FormParts\PageUrlSelector;
 use Phine\Framework\FormElements\Fields\Checkbox;
 use Phine\Bundles\BuiltIn\Modules\Frontend\RegisterConfirm;
 use Phine\Framework\FormElements\Fields\CheckList;
-use Phine\Database\Core\Membergroup;
-use Phine\Database\BuiltIn\RegisterConfirmMembergroup;
-use Phine\Database\Access;
+use App\Phine\Database\Core\Membergroup;
+use App\Phine\Database\BuiltIn\RegisterConfirmMembergroup;
+use App\Phine\Database\Access;
 use Phine\Framework\System\Http\Request;
 /**
  * The registration confirmation element

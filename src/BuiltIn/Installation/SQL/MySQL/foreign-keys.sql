@@ -54,3 +54,25 @@ ALTER TABLE `pc_builtin_register_confirm_membergroup`
 
 ALTER TABLE `pc_builtin_content_repeater`
   ADD CONSTRAINT `pc_builtin_content_repeater_ibfk_1` FOREIGN KEY (`Content`) REFERENCES `pc_core_content` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- added in 1.0.3 --
+
+ALTER TABLE `pc_builtin_content_change_email`
+  ADD CONSTRAINT `pc_builtin_content_change_email_ibfk_3` FOREIGN KEY (`ConfirmUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_email_ibfk_1` FOREIGN KEY (`Content`) REFERENCES `pc_core_content` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_email_ibfk_2` FOREIGN KEY (`NextUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+ALTER TABLE `pc_builtin_content_change_password`
+  ADD CONSTRAINT `pc_builtin_content_change_password_ibfk_3` FOREIGN KEY (`ConfirmUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_password_ibfk_1` FOREIGN KEY (`Content`) REFERENCES `pc_core_content` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_password_ibfk_2` FOREIGN KEY (`NextUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+ALTER TABLE `pc_builtin_content_change_email_confirm`
+  ADD CONSTRAINT `pc_builtin_content_change_email_confirm_ibfk_3` FOREIGN KEY (`ErrorUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_email_confirm_ibfk_1` FOREIGN KEY (`Content`) REFERENCES `pc_core_content` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_email_confirm_ibfk_2` FOREIGN KEY (`SuccessUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+ALTER TABLE `pc_builtin_content_change_password_confirm`
+  ADD CONSTRAINT `pc_builtin_content_change_password_confirm_ibfk_3` FOREIGN KEY (`ErrorUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_password_confirm_ibfk_1` FOREIGN KEY (`Content`) REFERENCES `pc_core_content` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pc_builtin_content_change_password_confirm_ibfk_2` FOREIGN KEY (`SuccessUrl`) REFERENCES `pc_core_page_url` (`ID`) ON DELETE SET NULL ON UPDATE CASCADE;

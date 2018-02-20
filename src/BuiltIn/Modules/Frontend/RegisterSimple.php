@@ -4,11 +4,11 @@ use Phine\Bundles\Core\Logic\Module\FrontendForm;
 use Phine\Framework\FormElements\Fields\Input;
 use Phine\Framework\Validation\StringLength;
 use Phine\Framework\Validation\PhpFilter;
-use Phine\Database\BuiltIn\ContentRegisterSimple;
+use App\Phine\Database\BuiltIn\ContentRegisterSimple;
 use Phine\Framework\Validation\DatabaseCount;
-use Phine\Database\Core\Member;
+use App\Phine\Database\Core\Member;
 use Phine\Framework\FormElements\Fields\Checkbox;
-use Phine\Framework\System\String;
+use Phine\Framework\System\Str;
 use Phine\Bundles\BuiltIn\Modules\Backend\RegisterSimpleForm;
 use Phine\Framework\System\Date;
 use Phine\Bundles\Core\Logic\Util\PathUtil;
@@ -36,6 +36,7 @@ class RegisterSimple extends FrontendForm
     protected function Init()
     {
         $this->register = ContentRegisterSimple::Schema()->ByContent($this->Content());
+        $this->HandleLoggedIn();
         $this->AddNameField();
         $this->AddEMailField();
         $this->AddPasswordField();
@@ -81,6 +82,18 @@ class RegisterSimple extends FrontendForm
         $this->SetRequired($name);
     }
     
+    private function HandleLoggedIn()
+    {
+        $nextUrl = $this->register->GetNextUrl();
+        if (!self::Guard()->Accessor()->IsUndefined()) {
+            if ($nextUrl) {
+                Response::Redirect(FrontendRouter::Url($nextUrl));
+            }
+            else {
+                throw new \Exception(Trans('BuiltIn.RegisterSimple.Exception.AlreadyLoggedIn'));
+            }
+        }
+    }
     
     protected function OnSuccess()
     {
@@ -88,7 +101,7 @@ class RegisterSimple extends FrontendForm
         $this->member->SetEMail($this->Value('EMail'));
         $this->member->SetName($this->Value('Name'));
         $password = $this->Value('Password');
-        $salt = String::Start(md5(uniqid(microtime())), 8);
+        $salt = Str::Start(md5(uniqid(microtime())), 8);
         $pwHash = hash('sha256', $password . $salt);
         $this->member->SetPassword($pwHash);
         $this->member->SetPasswordSalt($salt);

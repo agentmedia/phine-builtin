@@ -1,9 +1,9 @@
 <?php
 
 namespace Phine\Bundles\BuiltIn\Logic\Registration;
-use Phine\Database\Core\Member;
+use App\Phine\Database\Core\Member;
 use Phine\Framework\Validation\Validator;
-use Phine\Database\Core\PageUrl;
+use App\Phine\Database\Core\PageUrl;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
 /* Helper class for member confirmation */
 class Confirmer extends Validator

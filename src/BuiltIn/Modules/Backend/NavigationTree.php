@@ -4,8 +4,8 @@ namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Logic\Module\BackendModule;
 use Phine\Bundles\BuiltIn\Logic\Tree\NavigationTreeProvider;
-use Phine\Database\BuiltIn\NavigationItem;
-use Phine\Database\BuiltIn\ContentNavigation;
+use App\Phine\Database\BuiltIn\NavigationItem;
+use App\Phine\Database\BuiltIn\ContentNavigation;
 use Phine\Framework\System\Http\Request;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\BackendRouter;

@@ -2,8 +2,8 @@
 
 namespace Phine\Bundles\BuiltIn\Logic\Hooks;
 use Phine\Bundles\Core\Logic\Hooks\IDeleteHook;
-use Phine\Database\BuiltIn\ContentContainer;
-use Phine\Database\Core\Container;
+use App\Phine\Database\BuiltIn\ContentContainer;
+use App\Phine\Database\Core\Container;
 use Phine\Bundles\Core\Logic\Tree\TreeBuilder;
 use Phine\Bundles\Core\Logic\Tree\ContentTreeUtil;
 use Phine\Bundles\Core\Logic\Logging\Logger;

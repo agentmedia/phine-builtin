@@ -6,13 +6,12 @@ use Phine\Bundles\Core\Logic\Module\FrontendModule;
 use Phine\Framework\System\Http\Request;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
-use Phine\Database\BuiltIn\ContentRegisterConfirm;
+use App\Phine\Database\BuiltIn\ContentRegisterConfirm;
 use Phine\Bundles\BuiltIn\Logic\Registration\Confirmer;
 use Phine\Bundles\BuiltIn\Modules\Backend\RegisterConfirmForm;
 use Phine\Framework\System\Date;
-use Phine\Database\Core\MemberMembergroup;
-use Phine\Database\BuiltIn\RegisterConfirmMembergroup;
-use Phine\Database\Access;
+use App\Phine\Database\Core\MemberMembergroup;
+use App\Phine\Database\BuiltIn\RegisterConfirmMembergroup;
 
 class RegisterConfirm extends FrontendModule
 {

@@ -29,7 +29,7 @@ class Manifest extends BundleManifest
      */
     public function Version()
     {
-        return '1.0.2';
+        return '1.0.3';
     }
     /**
      * Loads extra code not available by autoload
@@ -53,16 +53,16 @@ class Manifest extends BundleManifest
      */
     public function Dependencies()
     {
-        return array(new BundleDependency('Core', '1.0.3', '1.2.2'));
+        return array(new BundleDependency('Core', '1.2.3', '1.2.3'));
     }
     
-    /**
+    /*
      * Loads code not coverable by phine autoload
      */
-    protected function LoadFrontendCode()
+    /*protected function LoadFrontendCode()
     {
         require_once Path::Combine(__DIR__, 'ThirdParty/PHPMailer/PHPMailerAutoload.php');
-    }
+    }*/
 
 }
 

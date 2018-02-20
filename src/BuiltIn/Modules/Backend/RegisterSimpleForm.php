@@ -3,7 +3,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Backend;
 
 use Phine\Bundles\Core\Logic\Module\ContentForm;
-use Phine\Database\BuiltIn\ContentRegisterSimple;
+use App\Phine\Database\BuiltIn\ContentRegisterSimple;
 use Phine\Framework\FormElements\Fields\Input;
 use Phine\Bundles\BuiltIn\Modules\Frontend\RegisterSimple;
 use Phine\Bundles\Core\Snippets\FormParts\PageUrlSelector;

@@ -2,7 +2,7 @@
 namespace Phine\Bundles\BuiltIn\Modules\Backend;
 use Phine\Bundles\Core\Logic\Module\ContentForm;
 use Phine\Bundles\BuiltIn\Modules\Frontend\Html;
-use Phine\Database\BuiltIn\ContentHtml;
+use App\Phine\Database\BuiltIn\ContentHtml;
 use Phine\Framework\FormElements\RichTextEditor\CKEditorRenderer;
 use Phine\Framework\FormElements\Fields\Custom;
 use Phine\Bundles\Core\Logic\Util\PathUtil;
