@@ -17,6 +17,7 @@ use Phine\Bundles\BuiltIn\Logic\Registration\Confirmer;
 use Phine\Bundles\BuiltIn\Logic\HtmlTemplating\TemplateParser;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
+use PHPMailer\PHPMailer\PHPMailer;
 /**
  * The simple registration form
  */
@@ -115,7 +116,7 @@ class RegisterSimple extends FrontendForm
     
     private function SendConfirmMail()
     {
-        $mailer = new \PHPMailer(true);
+        $mailer = new PHPMailer(true);
         $mailer->From = $this->register->GetMailFrom();
         $mailer->Subject = $this->register->GetMailSubject();
         $mailer->addAddress($this->Value('EMail'));

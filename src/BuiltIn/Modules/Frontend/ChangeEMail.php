@@ -19,6 +19,7 @@ use App\Phine\Database\Core\Member;
 use Phine\Framework\System\Str;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class ChangeEMail extends FrontendForm
 {
@@ -66,7 +67,7 @@ class ChangeEMail extends FrontendForm
 
     private function SendConfirmMail(MemberChangeRequest $changeRequest)
     {
-        $mailer = new \PHPMailer(true);
+        $mailer = new PHPMailer(true);
         $mailer->From = $this->changeMail->GetMailFrom();
         $mailer->Subject = $this->changeMail->GetMailSubject();
         $mailer->addAddress($this->Value('NewEMail'));

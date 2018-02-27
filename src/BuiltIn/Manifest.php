@@ -29,7 +29,7 @@ class Manifest extends BundleManifest
      */
     public function Version()
     {
-        return '1.0.3';
+        return '1.0.4';
     }
     /**
      * Loads extra code not available by autoload

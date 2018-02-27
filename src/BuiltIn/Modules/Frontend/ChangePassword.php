@@ -19,7 +19,7 @@ use Phine\Bundles\Core\Logic\Util\PathUtil;
 use Phine\Bundles\BuiltIn\Logic\HtmlTemplating\TemplateParser;
 use Phine\Framework\System\Http\Response;
 use Phine\Bundles\Core\Logic\Routing\FrontendRouter;
-
+use PHPMailer\PHPMailer\PHPMailer;
 class ChangePassword extends FrontendForm
 {
 
@@ -78,7 +78,7 @@ class ChangePassword extends FrontendForm
 
     private function SendConfirmMail(MemberChangeRequest $changeRequest)
     {
-        $mailer = new \PHPMailer(true);
+        $mailer = new PHPMailer(true);
         $mailer->From = $this->changePassword->GetMailFrom();
         $mailer->Subject = $this->changePassword->GetMailSubject();
         $mailer->addAddress($changeRequest->GetMember()->GetEMail());
