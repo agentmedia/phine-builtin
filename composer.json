@@ -4,7 +4,6 @@
     "license": "Apache-2.0",
     "type": "phine-bundle",
     "homepage": "http://github.com/agentmedia/phine-builtin",
-    "version": "1.0.3",
     "authors": [
         {
             "name": "Klaus Potzesny",
